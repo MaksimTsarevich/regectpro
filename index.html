@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переход в браузер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Перейдите по ссылке в браузере</h1>
+    <p>Вы можете открыть сайт в вашем браузере. Если страница не откроется автоматически, <a href="https://weddingmeetam.vercel.app" id="openLink">кликните здесь</a>.</p>
+    <script>
+        // Попробовать открыть в браузере
+        window.location.href = "https://weddingmeetam.vercel.app"; // Замените на вашу ссылку
+
+        // Дополнительный редирект через 3 секунды
+        setTimeout(function() {
+            window.location.href = "https://weddingmeetam.vercel.app"; // Замените на вашу ссылку
+        }, 3000);  // Это время в миллисекундах
+    </script>
+</body>
+</html>
