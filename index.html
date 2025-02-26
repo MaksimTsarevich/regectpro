@@ -4,26 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Переход в браузер</title>
+    <title>Открыть в браузере</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
         }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <h1>Перейдите по ссылке в браузере</h1>
-    <p>Вы можете открыть сайт в вашем браузере. Если страница не откроется автоматически, <a href="https://weddingmeetam.vercel.app" id="openLink">кликните здесь</a>.</p>
+    <p>Чтобы открыть сайт в вашем браузере, нажмите на кнопку ниже.</p>
+    <!-- Кнопка, которая перенаправляет в браузер -->
+    <a href="https://weddingmeetam.vercel.app" target="_blank" class="button">Открыть в браузере</a>
+    
     <script>
-        // Попробовать открыть в браузере
-        window.location.href = "https://weddingmeetam.vercel.app"; // Замените на вашу ссылку
-
-        // Дополнительный редирект через 3 секунды
-        setTimeout(function() {
-            window.location.href = "https://weddingmeetam.vercel.app"; // Замените на вашу ссылку
-        }, 3000);  // Это время в миллисекундах
+        // Для автоматического открытия в браузере, если страница открыта внутри приложения (например, Telegram)
+        window.onload = function() {
+            // Показываем кнопку пользователю, если он не перешел в браузер
+            setTimeout(function() {
+                document.querySelector('.button').style.display = 'inline-block'; // Показываем кнопку через 1 секунду
+            }, 1000);  // Задержка перед показом кнопки (можно настроить)
+        }
     </script>
 </body>
 </html>
